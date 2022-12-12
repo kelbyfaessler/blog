@@ -2,19 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="About">
+<Layout title="Kelby's Blog">
     <main>
-        <h1 class="blog-title">Kelby Faessler</h1>
-        <p>
-            This is a description.
-        </p>
+        <div class="xl:max-w-3xl mx-auto mb-20">
+            <h1 class="title">Kelby Faessler</h1>
+            <p>About page coming soon...</p>
+        </div>
     </main>
 </Layout>
 
 <style>
-    .blog-title {
+    .title {
         font-family: protipo-wide,sans-serif;
-        font-weight: 700;
         font-style: normal;
+        letter-spacing: 0.03em;
+        @apply text-6xl font-medium mt-28 mb-28;
     }
 </style>
