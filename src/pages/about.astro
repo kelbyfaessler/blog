@@ -6,7 +6,14 @@ import Layout from '../layouts/Layout.astro';
     <main>
         <div class="xl:max-w-3xl mx-auto mb-20">
             <h1 class="title">Kelby Faessler</h1>
-            <p class="text-xl">About page coming soon...</p>
+            <div class="flex flex-row">
+                <div class="mr-44">
+                    <p>I'm a software engineer working at <a href="https://foldapp.com/">Fold</a>.</p>
+                    <p>My professional interests include bitcoin, entrepreneurship/indie hacking, python, developer productivity, language design, newer generation languages like rust and golang, approaches to testing software, neovim, among others.</p>
+                    <p>Some of my hobbies are skiing, hiking, jui jitsu, and spending time with my family.</p>
+                </div>
+                <img src="assets/profile_small.jpg" alt="Kelby's face" class="shrink-0 self-start">
+            </div>
         </div>
     </main>
 </Layout>
@@ -17,5 +24,11 @@ import Layout from '../layouts/Layout.astro';
         font-style: normal;
         letter-spacing: 0.03em;
         @apply text-6xl font-medium mt-28 mb-28;
+    }
+    p {
+        @apply text-xl mb-8;
+    }
+    a {
+        @apply text-blue-700 hover:underline hover:text-blue-500; 
     }
 </style>
