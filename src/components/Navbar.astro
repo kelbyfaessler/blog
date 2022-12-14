@@ -1,11 +1,10 @@
 ---
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1); // remove the first "/"
+const { page } = Astro.props;
 ---
 
 <nav class="xl:max-w-3xl mx-auto mb-20">
-  <a class={currentPath === "" ? "active" : ""} href="/">Blog</a>
-  <a class={currentPath === "about" ? "active" : ""} href="/about">About</a>
+  <a class={page === "home" ? "active" : ""} href="/">Blog</a>
+  <a class={page === "about" ? "active" : ""} href="/about">About</a>
 </nav>
 
 <style>
