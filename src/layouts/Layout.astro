@@ -19,9 +19,11 @@ const ADOBE_FONTS_URL = import.meta.env.ADOBE_FONTS_URL
         <title>{title}</title>
         <link rel="stylesheet" href={ADOBE_FONTS_URL}>
     </head>
-    <Navbar page={page} />
     <body>
-        <slot />
+        <div class="mx-4 sm:max-w-xl lg:max-w-3xl sm:mx-auto">
+            <Navbar page={page} />
+            <slot />
+        </div>
     </body>
 </html>
 <style is:global>

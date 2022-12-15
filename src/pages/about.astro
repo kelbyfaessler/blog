@@ -4,16 +4,17 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Kelby's Blog" page="about">
     <main>
-        <div class="xl:max-w-3xl mx-auto mb-20">
-            <h1 class="title">Kelby Faessler</h1>
-            <div class="flex flex-row">
-                <div class="mr-44">
-                    <p>I'm a software engineer working at <a href="https://foldapp.com/">Fold</a>.</p>
-                    <p>My professional interests include bitcoin, entrepreneurship/indie hacking, python, developer productivity, language design, newer generation languages like rust and golang, approaches to testing software, neovim, among others.</p>
-                    <p>Some of my hobbies are skiing, hiking, jui jitsu, and spending time with my family.</p>
+        <h1 class="title">Kelby Faessler</h1>
+        <div class="flex flex-row">
+            <div class="lg:mr-44">
+                <div class="flex justify-center">
+                    <img src="../assets/profile_small.jpg" alt="Kelby's face" class="sm:hidden shrink-0 self-start mb-12">
                 </div>
-                <img src="../assets/profile_small.jpg" alt="Kelby's face" class="shrink-0 self-start">
+                <p>I'm a software engineer working at <a href="https://foldapp.com/">Fold</a>.</p>
+                <p>My professional interests include bitcoin, entrepreneurship/indie hacking, python, developer productivity, language design, newer generation languages like rust and golang, approaches to testing software, neovim, among others.</p>
+                <p>Some of my hobbies are skiing, hiking, jui jitsu, and spending time with my family.</p>
             </div>
+            <img src="../assets/profile_small.jpg" alt="Kelby's face" class="hidden sm:block shrink-0 self-start">
         </div>
     </main>
 </Layout>
@@ -23,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
         font-family: protipo-wide,sans-serif;
         font-style: normal;
         letter-spacing: 0.03em;
-        @apply text-6xl font-medium mt-28 mb-28;
+        @apply text-6xl font-medium mt-28 mb-12 sm:mb-28;
     }
     p {
         @apply text-xl mb-8;

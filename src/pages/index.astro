@@ -4,24 +4,23 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Kelby's Blog" page="home">
     <main>
-        <div class="xl:max-w-3xl mx-auto mb-20">
-            <h1 class="title">Blog Posts</h1>
-            <div class="flex flex-row border-b-2 text-xl py-4">
-                <p class="basis-1/2">Title</p>
-                <p class="basis-1/4">Date</p>
-                <p class="basis-1/4">Tags</p>
-            </div>
-            <a href="/posts/2022_11_29_why_blog">
-                <div class="flex flex-row text-xl py-4 hover:bg-orange-100 hover:shadow">
-                    <p class="basis-1/2">Why blog</p>
-                    <p class="basis-1/4 opacity-50">2022 Nov 29</p>
-                    <p class="basis-1/4 opacity-50">Meta</p>
-                </div>
-            </a>
-            <ul>
-                <a href=""></a>
-            </ul>
+        <h1 class="title text-center sm:text-left">Blog Posts</h1>
+        <div class="flex flex-row border-b-2 text-xl py-4">
+            <p class="basis-1/2">Title</p>
+            <p class="basis-1/4">Date</p>
+            <p class="basis-1/4">Tags</p>
         </div>
+        <a href="/posts/2022_11_29_why_blog">
+            <div class="flex flex-row text-xl py-4 hover:bg-orange-100 hover:shadow">
+                <p class="basis-1/2">Why blog</p>
+                <p class="sm:hidden basis-1/4 opacity-50">2022</p>
+                <p class="hidden sm:block basis-1/4 opacity-50">2022 Nov 29</p>
+                <p class="basis-1/4 opacity-50">Meta</p>
+            </div>
+        </a>
+        <ul>
+            <a href=""></a>
+        </ul>
     </main>
 </Layout>
 
