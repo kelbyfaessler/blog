@@ -1,0 +1,120 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Why Javascript">
+    <main>
+        <h1 class="post-title">Why Javascript?</h1>
+        <p class="post-date">2023 Feb 22</p>
+        <h3>Introduction</h3>
+            <p>
+                You might be wondering what this post is about since the title is (intentionally) vague. The reason it's vague is I want to cover two different versions of the question, "Why Javascript?":
+            </p>
+            <ol class="flex flex-col">
+                <li><span class="text-orange-600 font-bold mr-3">&#x25a0;</span> Why might you want to use Javascript in a new fullstack project?</li>
+                <li><span class="text-orange-600 font-bold mr-3">&#x25a0;</span> Why is javascript now popular for full stack?</li>
+            </ol>
+        <h3>Why use fullstack Javascript?</h3>
+            <p>
+                I'm a backend developer. I know python and C++. I haven't done a ton of frontend work and admittedly I don't know Javascript too well. And frankly, I don't really like Javascript that much either. I don't think it's particularly controversial to say Javascript has some big warts, and the Javascript ecosystem is a bit... well I'll just show you the top result on google: 
+            </p>
+            <img src="https://blog-kelbyfaessler.s3.amazonaws.com/why_javascript_google_search.png" class="mb-8">
+            <p>
+                And yet, despite all of that, I still chose fullstack Javascript for a side project. And not just a small and forgettable side project, but one I intend to make money from.
+            </p>
+            <p>
+                Why would a backend dev who doesn't know or particularly like Javascript pick it? Here were some of my thoughts:
+            </p>
+            <h4><span class="border-b-2 border-orange-500">SEO</span></h4>
+            <p>
+                I'm going to want good SEO to help with organic growth. The easiest solution for SEO plus the rest of my frontend needs seems to be a modern Javascript framework like nextjs, nuxtjs, sveltekit, etc. I naturally gravitated to sveltekit for two reasons:
+            </p>
+            <ol class="flex flex-col">
+                <li><span class="text-orange-600 font-bold mr-3">&#x25a0;</span> It seems to be the most inuitive and straightforward to learn if you aren't already deep into react (like me)</li>
+                <li><span class="text-orange-600 font-bold mr-3">&#x25a0;</span> I'm betting that its compiled approach will win long term vs runtime frameworks that must ship all framework code to the client</li>
+            </ol>
+            <h4><span class="border-b-2 border-orange-500">Production</span></h4>
+            <p>
+                There are also production benefits to using a fullstack framework like sveltekit or nextjs. Newer hosting providers like Vercel and Netlify make it incredibly easy to deploy an app built with these newer fullstack Javascript frameworks. I don't have to dockerize my app, I don't have to set up kubernetes, I don't have to mess with hosting provider settings and configure scaling behavior and configure which availability zones I'm deploying to globally. All of that is handled automatically and I can simply link my github repo.
+            </p>
+            <p>
+                Another production benefit is performance. If I'm deploying my sveltekit frontend to Vercel, then I can reduce latency by hosting my backend in the same datacenter as my frontend (trivial with a fullstack framework) and not having to forward requests from the sveltekit backend to a separate api.
+            </p>
+            <p>
+                That's not to say there wouldn't also be benefits from having the frontend and backend distinct. For example, there might be architectural benefits because each of the pieces is independently deployable, and if I wanted to rewrite/replace the backend api with a different technology later, it might be easier if its separate. Still, its hard to argue potential future benefits against tangible ease of development today.
+            </p>
+            <h4 class=""><span class="border-b-2 border-orange-500">Javascript Ecosystem</span></h4>
+            <p>
+                Finally, despite my jab at the javascript ecosystem, it still offers many libraries and a large community of developers. Any third party SDK or integration will most definitely have a javascript library (and javascript was probably one of the first languages they chose to support). Within the Javascript ecosystem there are now open source auth libraries (e.g. authjs) that allow you as an app developer to control user data rather than ceding to a 3rd party company you may not fully trust. That was a big one for me personally.
+            </p>
+            <p>
+            You might be wondering how Javascript got to this point from its humble beginnings as a hastily designed browser-only scripting language. I certainly wondered about this. Let's talk about it.
+            </p>
+        <h3>Why has Javascript gone fullstack?</h3>
+            <p>Javascript is clearly popular. From the 2022 stack overflow developer survey, two thirds of all developers surveyed said they've done extensive work in javascript over the past year. Two thirds! Stack overflow also let us know this is Javascript's 10th year in a row as the most commonly used programming language.</p>
+            <img src="https://blog-kelbyfaessler.s3.amazonaws.com/why_javascript_stackoverflow_survey.png" class="mb-8">
+            <p>
+                If you're like me, you might wonder how a flawed language like Javascript broke out of its browser confines, has gone full stack, and now is one of the most ubiquitous languages period.
+            </p>
+            <p>
+                I've already outlined some of the benefits of fullstack Javascript, so there are certainly benefits to be had. But why Javascript and not some other language? Because it has a monopoly on the frontend! You simply can't easily and with the similar performance, write other languages on the frontend. And because of that, you can't really use anything else fullstack.
+            </p>
+            <h4 class=""><span class="border-b-2 border-orange-500">WASM</span></h4>
+            <p>
+                Notice I qualified the prior statement with "easily and with similar performance". Today, it's technically possible to use other languages in the frontend by having them target WASM. Unfortunately this integration is still nascent and in some cases isn't easy, while in other cases doesn't yield similar performance to Javascript.
+            </p>
+            <p>
+                That said, I'm excited about the future prospects of WASM. As it gains more adoption and performance optimizations it could potentially deliver greater performance than Javascript. After all, in what world does it make sense that Javascript performs equally to Rust?
+            </p>
+            <p>
+                Not only that, but the prospect of having your choice of frontend language is exciting from a couple perspectives:
+            </p>
+            <ol class="flex flex-col mb-8">
+                <li><span class="text-orange-600 font-bold mr-3">&#x25a0;</span> I could build with the language and tech I want</li>
+                <li><span class="text-orange-600 font-bold mr-3">&#x25a0;</span> It could break Javascript's monopoly</li>
+            </ol>
+            <p>
+                If Javascript's monopoly on the frontend is broken, then we might finally see Javascript assume it's natural spot in the pecking order of programming languages on merit alone and not due to monopoly. Bye bye Javascript!
+            </p>
+            <p>
+                Then again, devs might simply continue on with Typescript :)
+            </p>
+    </main>
+</Layout>
+
+<style>
+    .post-title {
+        font-family: protipo-wide,sans-serif;
+        font-style: normal;
+        letter-spacing: 0.03em;
+        @apply text-6xl font-bold mt-28 mb-2;
+    }
+    .post-date {
+        @apply text-base uppercase font-semibold opacity-50 mb-32;
+    }
+    h3 {
+        @apply text-2xl font-bold mt-20 mb-8;
+    }
+    h4 {
+        @apply text-xl font-medium mt-12 mb-4;
+    }
+    p {
+        @apply text-xl mb-8;
+    }
+    a {
+        @apply text-blue-700 hover:underline hover:text-blue-500; 
+    }
+    .quote {
+        @apply pl-12 sm:pl-20 my-20 italic opacity-70 border-l-4 border-orange-500;
+    }
+    ul {
+        @apply list-disc mb-8 pl-12 sm:pl-20;
+    }
+    li {
+        @apply text-xl pl-4;
+    }
+    ul li::marker {
+        content: "\1F892";
+    }
+</style>
+
